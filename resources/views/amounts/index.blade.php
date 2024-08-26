@@ -9,6 +9,8 @@
       <button type="submit">Add Amount</button>
   </form>
 
+  @if($amounts && count($amounts) > 0)
+
   <ul>
       @foreach ($amounts as $amount)
           <li>
@@ -34,5 +36,8 @@
           </li>
       @endforeach
   </ul>
+    @else
+        <p>No amounts available.</p>
+    @endif
 
   @endsection
